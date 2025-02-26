@@ -7,6 +7,4 @@ defmodule MyApp.CQRS do
       adapter: Commanded.EventStore.Adapters.EventStore,
       event_store: MyApp.EventStore
     ]
-
-  router(MyApp.Facility.Router)
 end
