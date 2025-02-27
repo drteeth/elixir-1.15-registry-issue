@@ -1,9 +1,9 @@
-defmodule MyApp.Facility.Supervisor do
+defmodule MyApp.MyBoundedContext.Supervisor do
   @moduledoc false
 
   use Supervisor
 
-  alias MyApp.Facility.ProcessManager
+  alias MyApp.MyBoundedContext.ProcessManager
 
   def start_link(init_arg) do
     Supervisor.start_link(__MODULE__, init_arg, name: __MODULE__)
@@ -11,7 +11,7 @@ defmodule MyApp.Facility.Supervisor do
 
   def init(_init_arg) do
     children = [
-      ProcessManager.CascadeSelectorMarkedAsNonexistent
+      ProcessManager.MyProcessManager
     ]
 
     Supervisor.init(children, strategy: :one_for_one)

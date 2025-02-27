@@ -27,10 +27,7 @@ defmodule MyApp.MixProject do
     [
       {:commanded, "~> 1.4"},
       {:commanded_eventstore_adapter, "~> 1.4"},
-      {:ecto_sql, "~> 3.10"},
-      {:elixir_uuid, "~> 1.2"},
-      {:jason, "~> 1.4"},
-      {:postgrex, "~> 0.17"}
+      {:jason, "~> 1.4"}
     ]
   end
 end

@@ -6,7 +6,7 @@ defmodule MyApp.Application do
   def start(_type, _args) do
     children = [
       MyApp.CQRS,
-      MyApp.Facility.Supervisor
+      MyApp.MyBoundedContext.Supervisor
     ]
 
     opts = [strategy: :one_for_one]

@@ -1,4 +1,4 @@
-defmodule MyApp.Facility.EventStoreRegistryTest do
+defmodule MyApp.MyBoundedContext.EventStoreRegistryTest do
   use MyApp.CqrsCase
 
   describe "fast test" do

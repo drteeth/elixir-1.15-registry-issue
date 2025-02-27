@@ -1,15 +1,9 @@
 defmodule MyApp.CqrsCase do
   @moduledoc false
 
-  use ExUnit.CaseTemplate
+  # Based on commanded documentation: https://hexdocs.pm/commanded/testing.html#tests-using-the-event-store-and-read-store
 
-  using do
-    quote do
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-    end
-  end
+  use ExUnit.CaseTemplate
 
   setup do
     {:ok, _} = Application.ensure_all_started(:myapp)
