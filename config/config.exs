@@ -10,7 +10,7 @@ config :myapp, MyApp.EventStore,
   column_data_type: "jsonb",
   serializer: Commanded.Serialization.JsonSerializer,
   types: EventStore.PostgresTypes,
-  url: "ecto://postgres@localhost:5432/postgres",
+  url: "ecto://postgres:postgres@localhost:5432/postgres",
   pool_size: 10
 
 config :logger,
